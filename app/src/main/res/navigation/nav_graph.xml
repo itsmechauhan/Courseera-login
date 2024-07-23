@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_page_nav">
+
+    <fragment
+        android:id="@+id/login_page_nav"
+        android:name="com.example.coursera.loginpage"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_loginpage">
+
+        <action
+            android:id="@+id/first_to_second"
+            app:destination="@id/email_login_nav" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/email_login_nav"
+        android:name="com.example.coursera.email_login"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_email_login">
+
+        <action
+            android:id="@+id/second_to_first"
+            app:destination="@id/login_page_nav" />
+    </fragment>
+</navigation>
